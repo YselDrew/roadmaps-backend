@@ -1,4 +1,4 @@
-import { MigrationInterface, QueryRunner } from "typeorm"
+import { MigrationInterface, QueryRunner } from "typeorm";
 
 export class createTableNote1675890143313 implements MigrationInterface {
 	public async up(queryRunner: QueryRunner): Promise<void> {
@@ -13,6 +13,6 @@ export class createTableNote1675890143313 implements MigrationInterface {
 	public async down(queryRunner: QueryRunner): Promise<void> {
 		await queryRunner.query(`
 			DROP TABLE "note";
-		`)
+		`);
 	}
 }

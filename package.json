@@ -4,14 +4,16 @@
   "description": "Simple backend API to work with custom roadmaps",
   "main": "index.js",
   "scripts": {
-    "start:dev": "npx nodemone index.ts",
+    "start:dev": "npx nodemon index.ts",
     "build": "tsc --build",
     "typeorm": "typeorm-ts-node-commonjs",
     "migration:show": "npm run typeorm migration:show -- -d ormconfig.ts",
     "migration:generate": "npm run typeorm migration:generate -- -d ormconfig.ts",
     "migration:create": "npm run typeorm migration:create",
     "migration:run": "ts-node ./node_modules/typeorm/cli.js migration:run -d ormconfig.ts",
-    "migration:revert": "npm run typeorm migration:revert -- -d ormconfig.ts"
+    "migration:revert": "npm run typeorm migration:revert -- -d ormconfig.ts",
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint . --ext .ts --fix"
   },
   "author": "Andrii Kyselov",
   "license": "UNLICENSED",
@@ -26,6 +28,11 @@
     "typescript": "^4.9.5"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.51.0",
+    "@typescript-eslint/parser": "^5.51.0",
+    "eslint": "^8.33.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-prettier": "^4.2.1",
     "nodemon": "^2.0.20"
   }
 }

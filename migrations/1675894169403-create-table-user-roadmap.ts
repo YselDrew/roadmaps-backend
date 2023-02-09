@@ -1,4 +1,4 @@
-import { MigrationInterface, QueryRunner } from "typeorm"
+import { MigrationInterface, QueryRunner } from "typeorm";
 
 export class createTableUserRoadmap1675894169403 implements MigrationInterface {
 	public async up(queryRunner: QueryRunner): Promise<void> {
@@ -15,6 +15,6 @@ export class createTableUserRoadmap1675894169403 implements MigrationInterface {
 	public async down(queryRunner: QueryRunner): Promise<void> {
 		await queryRunner.query(`
 			DROP TABLE "user_roadmap";
-		`)
+		`);
 	}
 }
