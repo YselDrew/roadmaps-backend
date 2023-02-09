@@ -4,6 +4,7 @@ module.exports = {
     project: 'tsconfig.json',
     tsconfigRootDir: __dirname,
     sourceType: 'module',
+    ecmaVersion: 2020,
   },
   plugins: ['@typescript-eslint/eslint-plugin', 'import'],
   extends: ['plugin:@typescript-eslint/recommended'],
@@ -51,3 +52,8 @@ module.exports = {
     },
   },
 };
+
+// check this one too
+// extends: 'airbnb-base
+// npm install eslint-config-airbnb-base
+
