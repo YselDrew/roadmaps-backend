@@ -3,7 +3,7 @@ import express, { Express } from 'express';
 import config from './config/config';
 import routes from './routes/routes';
 const {
-	application: { port },
+  application: { port },
 } = config;
 
 import dataSource from './libs/typeorm';
@@ -11,11 +11,11 @@ import dataSource from './libs/typeorm';
 const app: Express = express();
 
 (async () => {
-	dataSource.initialize();
+  dataSource.initialize();
 
-	routes(app);
+  routes(app);
 
-	app.listen(port, () => {
-		console.log(`Server is running on port ${port}`);
-	});
+  app.listen(port, () => {
+    console.log(`Server is running on port ${port}`);
+  });
 })();

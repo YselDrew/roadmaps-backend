@@ -3,11 +3,11 @@ import { ValidationError, Context } from 'joi';
 import { IValidationErrorResponse } from '../../interfaces/joi/validationErrorResponse';
 
 export default (error: ValidationError): IValidationErrorResponse[] => {
-	const { details } = error;
+  const { details } = error;
 
-	return details.map(({ message, context }) => {
-		const { key } = context as Context;
+  return details.map(({ message, context }) => {
+    const { key } = context as Context;
 
-		return { field: key, message };
-	});
+    return { field: key, message };
+  });
 };
