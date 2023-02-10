@@ -1,5 +1,6 @@
-import insertRoadmap from "../../repositories/roadmaps/insertRoadmap";
+import { ICreateRoadmap } from '../../interfaces/roadmaps/createRoadmap';
+import insertRoadmap from '../../repositories/roadmaps/insertRoadmap';
 
-export default async (roadmap: any) => {
-	return insertRoadmap(roadmap);
+export default async (roadmap: ICreateRoadmap) => {
+  return insertRoadmap(roadmap);
 };

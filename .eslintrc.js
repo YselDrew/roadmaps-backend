@@ -20,9 +20,10 @@ module.exports = {
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/no-explicit-any': 'warn',
     'max-len': ['error', { code: 100 }],
-    "indent": ["error", "tab"],
-    "eol-last": ["error", "always"],
-    "semi": ["error", "always"],
+    'indent': ['error', 2],
+    'quotes': ['error', 'single'],
+    'eol-last': ['error', 'always'],
+    'semi': ['error', 'always'],
     'import/order': [
       'error',
       {
@@ -52,8 +53,3 @@ module.exports = {
     },
   },
 };
-
-// check this one too
-// extends: 'airbnb-base
-// npm install eslint-config-airbnb-base
-
