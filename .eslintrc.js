@@ -19,7 +19,7 @@ module.exports = {
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/no-explicit-any': 'warn',
-    'max-len': ['error', { code: 100 }],
+    'max-len': ['error', { code: 80 }],
     'indent': ['error', 2],
     'quotes': ['error', 'single'],
     'eol-last': ['error', 'always'],

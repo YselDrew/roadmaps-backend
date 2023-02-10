@@ -5,9 +5,4 @@ import validateCreateRoadmap from '../middlewares/joi/validateCreateRoadmap';
 
 export const router: Router = express.Router();
 
-router
-  .post(
-    '/', 
-    validateCreateRoadmap,
-    createRoadmap,
-  );
+router.post('/', validateCreateRoadmap, createRoadmap);

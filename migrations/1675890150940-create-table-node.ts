@@ -1,8 +1,8 @@
 import { MigrationInterface, QueryRunner } from 'typeorm';
 
 export class createTableNode1675890150940 implements MigrationInterface {
-  public async up(queryRunner: QueryRunner): Promise<void> {
-    await queryRunner.query(`
+	public async up(queryRunner: QueryRunner): Promise<void> {
+		await queryRunner.query(`
 			CREATE TABLE "node" (
 				id SERIAL PRIMARY KEY,
 				name VARCHAR(100) NOT NULL,
@@ -14,11 +14,11 @@ export class createTableNode1675890150940 implements MigrationInterface {
 					REFERENCES note(id)
 			);
 		`);
-  }
+	}
 
-  public async down(queryRunner: QueryRunner): Promise<void> {
-    await queryRunner.query(`
+	public async down(queryRunner: QueryRunner): Promise<void> {
+		await queryRunner.query(`
 			DROP TABLE "node";
 		`);
-  }
+	}
 }
