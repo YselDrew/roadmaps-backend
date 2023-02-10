@@ -3,12 +3,12 @@ import { Schema, ValidationResult } from 'joi';
 
 import { IValidationErrorResponse } from '../../interfaces/joi/validationErrorResponse';
 import formatErrors from '../../libs/joi/formatErrors';
-import createRoadmapBody from '../../libs/joi/schemas/roadmaps/createRoadmapBody';
+import idParam from '../../libs/joi/schemas/idParam';
 
 export default (req: Request, res: Response, next: NextFunction) => {
-  const { body } = req;
+  const { params } = req;
 
-  const { error }: ValidationResult<Schema> = createRoadmapBody.validate(body);
+  const { error }: ValidationResult<Schema> = idParam.validate(params);
 
   if (error) {
     const errors: IValidationErrorResponse[] = formatErrors(error);

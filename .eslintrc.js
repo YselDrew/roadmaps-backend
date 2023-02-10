@@ -6,7 +6,7 @@ module.exports = {
     sourceType: 'module',
     ecmaVersion: 2020,
   },
-  plugins: ['@typescript-eslint/eslint-plugin', 'import'],
+  plugins: ['@typescript-eslint', 'import'],
   extends: ['plugin:@typescript-eslint/recommended'],
   root: true,
   env: {
