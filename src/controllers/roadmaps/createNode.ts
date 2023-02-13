@@ -15,9 +15,9 @@ export default async (req: Request, res: Response, next: NextFunction) => {
   try {
     await createNode({ 
       name, 
-      roadmapId: +id, 
+      roadmapId: Number(id), 
       parentNodeId, 
-      noteId: +noteId || null, 
+      noteId: Number(noteId) || null, // 0 will be checked in validation
     });
 
     return res.status(201).json();

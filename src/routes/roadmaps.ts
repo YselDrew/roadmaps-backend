@@ -7,7 +7,6 @@ import validateCreateRoadmap from '../middlewares/joi/validateCreateRoadmap';
 import getRoadmap from '../controllers/roadmaps/getRoadmap';
 import createNode from '../controllers/roadmaps/createNode';
 
-
 export const router: Router = express.Router();
 
 router.post(
@@ -18,6 +17,9 @@ router.post(
 
 router.post(
   '/:id/nodes',
+  // check if payload is valid
+  // check if roadmap exists
+  // check if node is basic (allowed to have null parent)
   createNode,
 )
 
