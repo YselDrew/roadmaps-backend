@@ -8,9 +8,9 @@ export class createTableNode1675890150940 implements MigrationInterface {
 				name VARCHAR(100) NOT NULL,
 				roadmap_id INTEGER NOT NULL 
 					REFERENCES roadmap(id),
-				parent_node_id INTEGER NOT NULL
+				parent_node_id INTEGER
 					REFERENCES node(id),
-				note_id INTEGER NOT NULL
+				note_id INTEGER
 					REFERENCES note(id)
 			);
 		`);

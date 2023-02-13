@@ -1,6 +1,7 @@
 import { DataSource } from 'typeorm';
 
 import config from '../config/config';
+import { Node } from '../entities/Node';
 import { Roadmap } from '../entities/Roadmap';
 
 const {
@@ -15,7 +16,7 @@ export default new DataSource({
   password,
   database: dbName,
   synchronize: false,
-  entities: [Roadmap],
+  entities: [Roadmap, Node],
   migrations: ['migrations/**/*.ts'],
   migrationsTableName: 'migrations',
 });
